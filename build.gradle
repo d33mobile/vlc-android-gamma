@@ -42,7 +42,7 @@ allprojects {
 }
 
 ext {
-    appId = "org.videolan.vlc"
+    appId = "org.videolan.vlc.gamma"
     versionCode = 3070100
     vlcMajorVersion = project.hasProperty('forceVlc4') && project.getProperty('forceVlc4') ? 4 : 3
     versionName = vlcMajorVersion == 3 ? '3.7.1' : '4.0.0-preview - ' + versionCode

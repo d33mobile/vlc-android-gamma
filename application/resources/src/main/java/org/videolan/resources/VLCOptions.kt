@@ -44,6 +44,7 @@ import org.videolan.tools.KEY_CASTING_PASSTHROUGH
 import org.videolan.tools.KEY_CASTING_QUALITY
 import org.videolan.tools.KEY_CUSTOM_LIBVLC_OPTIONS
 import org.videolan.tools.KEY_DEBLOCKING
+import org.videolan.tools.KEY_GAMMA_GLOBAL_VALUE
 import org.videolan.tools.KEY_ENABLE_FRAME_SKIP
 import org.videolan.tools.KEY_ENABLE_TIME_STRETCHING_AUDIO
 import org.videolan.tools.KEY_ENABLE_VERBOSE_MODE
@@ -240,6 +241,11 @@ object VLCOptions {
                 options.add("--soundfont=${soundFontFile.path}")
             }
             options.add("--preferred-resolution=${pref.getString(KEY_PREFERRED_RESOLUTION, "-1")!!}")
+            val gamma = pref.getFloat(KEY_GAMMA_GLOBAL_VALUE, 1.0f)
+            if (gamma != 1.0f) {
+                options.add("--video-filter=adjust")
+                options.add("--gamma=$gamma")
+            }
             if (BuildConfig.DEBUG) Log.d(this::class.java.simpleName, "VLC Options: ${options.joinToString(" ")}")
             return options
         }

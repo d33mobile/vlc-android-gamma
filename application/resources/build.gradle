@@ -68,8 +68,11 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.ext.kotlinx_version"
 
     api project(':application:tools')
-    devApi project(':libvlcjni:libvlc')
-    devApi project(':medialibrary')
+    // dev variant requires local libvlcjni/medialibrary checkouts — disabled in this fork
+    // devApi project(':libvlcjni:libvlc')
+    // devApi project(':medialibrary')
+    devApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
+    devApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
     debugApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"
     debugApi "org.videolan.android:medialibrary-all:$rootProject.ext.medialibraryVersion"
     releaseApi "org.videolan.android:libvlc-all:$rootProject.ext.libvlcVersion"

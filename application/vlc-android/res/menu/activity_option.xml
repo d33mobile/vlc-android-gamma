@@ -63,6 +63,12 @@
             android:visible="true"
             vlc:showAsAction="never" />
     <item
+            android:id="@+id/gamma_setting"
+            android:orderInCategory="2"
+            android:title="@string/gamma_setting"
+            android:visible="true"
+            vlc:showAsAction="never" />
+    <item
             android:id="@+id/ml_menu_scan"
             android:icon="@drawable/ic_add_to_scan"
             android:orderInCategory="3"

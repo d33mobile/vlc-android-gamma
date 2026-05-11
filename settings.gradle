@@ -18,7 +18,8 @@ android {
     buildToolsVersion = '36.0.0'
 }
 
-include ':libvlcjni:libvlc', ':medialibrary'
+// libvlcjni and medialibrary sources are absent in this fork; signedRelease pulls
+// them from Maven (libvlc-all / medialibrary-all). Re-add for ':dev' builds only.
 include ':application:tools', ':application:resources', ':application:mediadb', ':application:app', ':application:live-plot-graph', ':application:television', ':application:donations', ':application:remote-access-server'
 include ':application:vlc-android'
 include ':application:moviepedia'

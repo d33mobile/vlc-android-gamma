@@ -257,6 +257,7 @@ const val KEY_PLAYBACK_SPEED_VIDEO_GLOBAL_VALUE = "playback_speed_video_global_v
 const val KEY_PLAYBACK_SPEED_AUDIO_GLOBAL_VALUE = "playback_speed_audio_global_value"
 const val KEY_INCOGNITO_PLAYBACK_SPEED_VIDEO_GLOBAL_VALUE = "incognito_playback_speed_video_global_value"
 const val KEY_INCOGNITO_PLAYBACK_SPEED_AUDIO_GLOBAL_VALUE = "incognito_playback_speed_audio_global_value"
+const val KEY_GAMMA_GLOBAL_VALUE = "gamma_global_value"
 const val KEY_VIDEO_APP_SWITCH = "video_action_switch"
 const val VIDEO_TRANSITION_SHOW = "video_transition_show"
 const val VIDEO_HUD_TIMEOUT = "video_hud_timeout_in_s"

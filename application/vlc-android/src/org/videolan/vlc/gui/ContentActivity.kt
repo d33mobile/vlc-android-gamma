@@ -37,6 +37,7 @@ import org.videolan.vlc.PlaybackService
 import org.videolan.vlc.R
 import org.videolan.vlc.RendererDelegate
 import org.videolan.vlc.gui.browser.MLStorageBrowserFragment
+import org.videolan.vlc.gui.dialogs.GammaDialog
 import org.videolan.vlc.gui.dialogs.RenderersDialog
 import org.videolan.vlc.gui.helpers.UiTools
 import org.videolan.vlc.interfaces.Filterable
@@ -123,6 +124,11 @@ open class ContentActivity : AudioPlayerContainerActivity(), SearchView.OnQueryT
             R.id.ml_menu_filter -> {
                 if (!item.isActionViewExpanded) setSearchVisibility(true)
                 return super.onOptionsItemSelected(item)
+            }
+            R.id.gamma_setting -> {
+                if (supportFragmentManager.findFragmentByTag(GammaDialog.TAG) == null)
+                    GammaDialog.newInstance().show(supportFragmentManager, GammaDialog.TAG)
+                return true
             }
             else -> return super.onOptionsItemSelected(item)
         }
